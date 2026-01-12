@@ -1,0 +1,18 @@
+<!--layout.html-->
+<!DOCTYPE html>
+<html lang="fr" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP ENI</title>
+    <link rel="icon" th:href="@{/image/logoFilmotheque.png}">
+    <link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="~{fragment/header :: header()}"></div>
+<main th:replace="${content}">
+
+</main>
+<div th:replace="~{fragment/footer :: footer()}"></div>
+</body>
+</html>

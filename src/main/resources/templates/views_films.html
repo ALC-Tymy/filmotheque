@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::main})}">
+
+<main class="center-main">
+    <section class="center-section">
+        <h1>Les films de L'ENI</h1>
+        <!-- <textarea th:text="${filmList}"></textarea>-->
+        <table>
+            <thead>
+            <tr>
+                <th>Genre</th>
+                <th>Année</th>
+                <th>Titre</th>
+                <th>Réalisateur</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="film : ${filmList} ">
+                <td th:text="${film.genre}"></td>
+                <td th:text="${film.annee}"></td>
+                <td th:text="${film.titre}"></td>
+                <td th:text="${film.realisateur}"></td>
+                <td><a th:href="@{/films/details(id=${film.id})}">details</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+
+</html>

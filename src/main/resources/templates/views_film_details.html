@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout(~{::main})}">
+
+<main>
+    <form>
+
+        <ul class="flex-outer">
+            <h1>Détail du film</h1>
+            <li>
+                <label for="idGenre">Genre : </label>
+                <input id="idGenre" readonly th:value="${film.genre}" type="text">
+            </li>
+
+            <li>
+                <label for="idAnnee">Année : </label>
+                <input id="idAnnee" readonly th:value="${film.annee}" type="text">
+            </li>
+
+            <li>
+                <label for="idTitre">Titre : </label>
+                <input id="idTitre" readonly th:value="${film.titre}" type="text">
+            </li>
+
+            <li>
+                <label for="idRealisateur">Réalisateur : </label>
+                <input id="idRealisateur" readonly th:value="${film.realisateur}" type="text">
+            </li>
+
+            <li>
+                <label for="idDuree">Durée : </label>
+                <input id="idDuree" readonly th:value="${film.duree}" type="text">
+            </li>
+
+            <li>
+                <label for="idActeur">Acteur(s) : </label>
+                <input id="idActeur" readonly th:value="${film.acteurs}" type="text">
+            </li>
+
+            <li>
+                <label for="idSynopsis">Synopsis : </label>
+                <textarea id="idSynopsis" readonly th:text="${film.synopsis}"></textarea>
+            </li>
+        </ul>
+    </form>
+</main>
+</html>
