@@ -38,7 +38,7 @@
                 <!--                <input id="idRealisateur" th:field="${film.realisateur}" type="text">-->
                 <select id="idRealisateur" th:field="*{realisateur}">
                     <option value="">--Please choose an option--</option>
-                    <option th:each="real : ${film.realisateur}" th:value="${real}" th:text="${real}"></option>
+                    <option th:each="real : ${participant}" th:value="${real.id}" th:text="${real.name}"></option>
                 </select>
             </li>
 
