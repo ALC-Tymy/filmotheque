@@ -25,12 +25,12 @@
 
             <li>
                 <label for="idAnnee">Année : </label>
-                <input id="idAnnee" th:field="${film.annee}" type="text">
+                <input id="idAnnee" th:field="*{annee}" type="text">
             </li>
 
             <li>
                 <label for="idTitre">Titre : </label>
-                <input id="idTitre" th:field="${film.titre}" type="text">
+                <input id="idTitre" th:field="*{titre}" type="text">
             </li>
             <!--voir pour faire un converter-->
             <li>
@@ -44,17 +44,17 @@
 
             <li>
                 <label for="idDuree">Durée : </label>
-                <input id="idDuree" th:field="${film.duree}" type="text">
+                <input id="idDuree" th:field="*{duree}" type="text">
             </li>
 
             <li>
                 <label for="idActeur">Acteur(s) : </label>
-                <input id="idActeur" th:field="${film.acteurs}" type="text">
+                <input id="idActeur" th:field="*{acteurs}" type="text">
             </li>
 
             <li>
                 <label for="idSynopsis">Synopsis : </label>
-                <textarea id="idSynopsis" th:field="${film.synopsis}"></textarea>
+                <textarea id="idSynopsis" th:field="*{synopsis}"></textarea>
             </li>
         </ul>
         <input type="submit" value="Ajouter Film">
